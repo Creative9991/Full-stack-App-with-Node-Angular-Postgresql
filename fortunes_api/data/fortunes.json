@@ -1,0 +1,35 @@
+[
+{
+    "id": 1,
+    "message" : "Hello there",
+    "lucky_number" : 9,
+    "spirit_animal": "Dog"
+},
+{
+    "id": 2,
+    "message" : "Arey Entra Idi",
+    "lucky_number" : 12,
+    "spirit_animal": "Elephant"
+},
+{
+    "id": 3,
+    "message" : "Arey o",
+    "lucky_number" : 4,
+    "spirit_animal": "Puppy"
+},
+{
+    "id": 4,
+    "message" : "Arevaravarey AHhhh",
+    "lucky_number" : 43,
+    "spirit_animal": "Cat"
+},
+{
+    "id": 5,
+    "message" : "Agubhey",
+    "lucky_number" : 455,
+    "spirit_animal": "Pig"
+}
+
+
+
+]
