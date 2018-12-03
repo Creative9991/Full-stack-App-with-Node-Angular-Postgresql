@@ -23,7 +23,7 @@ VALUES
 ('desert', 'dry', 100),
 ('forest', 'haunted', 70 ),
 ('mountain', 'icy', 30);
-INSERT INTO lives(monster, habitat)
+INSERT INTO lives(monsters, habitats)
 VALUES 
 ('Fluffy', 'desert'),
 ('Noddles', 'forest'),
