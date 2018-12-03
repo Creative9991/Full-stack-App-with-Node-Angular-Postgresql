@@ -13,7 +13,7 @@ router.get('/', (request, response, next) => {
 
 router.get('/conditions', (request, response, next) => {
   pool.query(
-    'SELECT * FROM lives JOIN habitats ON habitats.name = lives.habitat',
+    'SELECT * FROM lives JOIN habitats ON habitats.name = lives.habitats',
     (err, res) => {
       if (err) return next(err);
 
