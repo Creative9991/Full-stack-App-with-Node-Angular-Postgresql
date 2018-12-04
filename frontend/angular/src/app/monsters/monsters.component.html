@@ -1,0 +1,12 @@
+<button type="button" class="primary"><a routerLink="/home">BACK</a></button>
+        <br><br>
+
+        <h1>Your are in Monsters</h1>
+
+        <h2>My Heroes</h2>
+<ul class="monsters">
+  <li *ngFor="let monster of monsters">
+    <span class="badge">{{monster.id}}</span> Name : {{monster.name}}, Personality : {{monster.personality}}
+  </li>
+</ul>
+ 
