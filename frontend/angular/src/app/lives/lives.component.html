@@ -1,4 +1,26 @@
-<button type="button" class="primary"><a routerLink="/home">BACK</a></button>
+<button type="button" class="btn btn-primary"><a routerLink="/home">BACK</a></button>
         <br><br>
-
-        <h1>Your are in Lives</h1>
+        <div class="jumbotron">
+        <h1>List of Monsters with Personalities</h1>
+      </div>
+        create a Live
+        <button type="button" class="btn btn-primary">Create</button>&nbsp;
+<ul class="lives">
+  <li *ngFor="let live of lives">
+    <div class="row">
+      <div class="col-lg-3" id="livehabitat">
+    <span id="liveshabitat">{{live.habitat}}</span>
+  </div>
+     <div class="col-lg-3" id="livemonster">
+       <span id="livesmonster">
+      Name : {{live.monster}}
+    </span>
+  </div>
+ <div class="col-lg-3">
+ <button type="button" class="btn btn-success">Edit</button>&nbsp;
+ <button type="button" class="btn btn-danger">Delete</button>&nbsp;
+ 
+</div>
+</div>
+  </li>
+</ul>
