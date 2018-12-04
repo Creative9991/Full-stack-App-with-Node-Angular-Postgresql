@@ -2,3 +2,9 @@
         <br><br>
 
         <h1>Your are in Habitats</h1>
+
+        <ul class="habitats">
+            <li *ngFor="let habitate of habitats">
+              <span class="something">{{habitate.id}}</span> Name : {{habitate.name}}, Climate : {{habitate.climate}}, Temperature : {{habitate.temperature}}
+            </li>
+          </ul>

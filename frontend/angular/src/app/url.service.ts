@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 //import { of } from 'rxjs/observable/of';
 import { Monster } from './monster';
+import {Habitate} from './habitate';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +14,16 @@ import { Monster } from './monster';
 export class UrlService {
 
   constructor(private http:HttpClient) { 
-    console.log(MONSTERS);
+    //console.log(MONSTERS);
   }
   getMonsters(): Observable<Monster[]> {
-    // TODO: send the message _after_ fetching the heroes
-    //this.messageService.add('HeroService: fetched heroes');
-    //return of(MONSTERS);
     return this.http.get<Monster[]>("http://localhost:3000/monsters");
-  }
+  };
+  
+  getHabitats(): Observable<Habitate[]> {
+    return this.http.get<Habitate[]>("http://localhost:3000/habitats");
+  };
+
 }
 
 

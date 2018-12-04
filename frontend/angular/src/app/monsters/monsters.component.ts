@@ -16,17 +16,12 @@ export class MonstersComponent implements OnInit {
   selectedMonster: Monster;
  
   monsters: Monster[];
-
-
-
   constructor(private router: Router, private urlService: UrlService) {
-    
-   
    }
 
   ngOnInit() {
     this.getMonsters();
-    console.log(this.monsters);
+    //console.log(this.monsters);
   }
   getMonsters(): void {
     this.urlService.getMonsters()
