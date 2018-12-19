@@ -4,21 +4,21 @@
         <h1>List of Monsters with Personalities</h1>
       </div>
         create a Live
-        <button type="button" class="btn btn-primary">Create</button>&nbsp;
+        <button type="button" class="btn btn-primary">Create</button>&nbsp;<br>
 <ul class="lives">
   <li *ngFor="let live of lives">
     <div class="row">
-      <div class="col-lg-3" id="livehabitat">
-    <span id="liveshabitat">{{live.habitat}}</span>
+      <div class="col-lg-3" id="livehabitate">
+    <span id="liveshabitate">Habitates : {{live.habitats}}</span>
   </div>
      <div class="col-lg-3" id="livemonster">
        <span id="livesmonster">
-      Name : {{live.monster}}
+      Monsters : {{live.monsters}}
     </span>
   </div>
  <div class="col-lg-3">
- <button type="button" class="btn btn-success">Edit</button>&nbsp;
- <button type="button" class="btn btn-danger">Delete</button>&nbsp;
+ <!-- <button type="button" class="btn btn-success">Edit</button>&nbsp;
+ <button type="button" class="btn btn-danger">Delete</button>&nbsp; -->
  
 </div>
 </div>

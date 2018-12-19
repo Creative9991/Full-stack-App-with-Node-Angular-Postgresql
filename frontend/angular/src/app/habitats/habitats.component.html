@@ -1,10 +1,36 @@
 <button type="button" class="btn btn-primary"><a routerLink="/home">BACK</a></button>
         <br><br>
 
-        <h1>Your are in Habitats</h1>
+        <div class="jumbotron">List of Habitats</div>
 
-        <ul class="habitats">
+        <!-- <ul class="habitats">
             <li *ngFor="let habitate of habitats">
               <span class="something">{{habitate.id}}</span> Name : {{habitate.name}}, Climate : {{habitate.climate}}, Temperature : {{habitate.temperature}}
             </li>
-          </ul>
+          </ul> -->
+
+          <ul class="habitats">
+           <li *ngFor="let habitate of habitats">
+              <div class="row">
+                <br><br>
+              <div class="col-lg-1" id="id">
+           <span id="habitateid">{{habitate.id}}</span>
+          </div>
+          <div class="col-lg-3" id="habitate">
+            <span id="habitatename">
+              Name : {{habitate.name}}
+            </span>
+          </div>
+          <div class="col-lg-3">
+              <span id="habitateclimate" id="climate">
+                  Climate : {{habitate.climate}}
+           </span>
+          </div> 
+          <div class="col-lg-3">
+              <span id="habitatetemperature" id="temperature">
+                  Temperature : {{habitate.temperature}}
+           </span>
+          </div> 
+        </div>
+      </li>
+    </ul>

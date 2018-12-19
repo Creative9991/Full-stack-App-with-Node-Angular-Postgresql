@@ -2,3 +2,33 @@ a{
     text-decoration: none;
     color: white;
 }
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
+  #habitate, #climate, #temperature {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 10em;
+    height: 70px;
+    width: 70px;
+  }
+  ul{
+    list-style-type:none
+  }
+  .habitats li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 70px;
+    border-radius: 4px;
+  }
+  body{
+    background-image: url("/assets/habitates.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

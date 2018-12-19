@@ -12,7 +12,6 @@ export class InputBoxComponent implements OnInit {
   @Input() ivalue:string;
   @Output() ivaluechange = new EventEmitter();
   constructor() { 
-    console.log(name);
   }
   change(event){
     var obj={};
