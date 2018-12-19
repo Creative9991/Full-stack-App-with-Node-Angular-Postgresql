@@ -2,8 +2,13 @@ const{Router}= require('express');
 const bodyParser = require('body-parser');
 const pool = require('../db');
 const router = Router();
+const cors = require('cors');
 
-router.get('/', (request, response,next)=>{
+const configurationOptions = {
+    origin : 'http://localhost:4200',
+    maxAge : 3600
+}
+router.get('/', cors(configurationOptions),(request, response,next)=>{
     pool.query('SELECT * FROM monsters order by id asc', (err, res)=> {
         if(err) return next(err);
         response.json(res.rows);

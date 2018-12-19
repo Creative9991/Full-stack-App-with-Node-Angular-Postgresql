@@ -1,9 +1,12 @@
 const { Router } = require('express');
 const pool = require('../db');
-
+const cors = require('cors');
 const router = Router();
-
-router.get('/', (request, response, next) => {
+const configurationOptions = {
+  origin : 'http://localhost:4200',
+  maxAge : 3600
+}
+router.get('/', cors(configurationOptions),(request, response, next) => {
     pool.query('SELECT * FROM habitats ORDER BY id ASC', (err, res) => {
       if (err) return next(err);
   
