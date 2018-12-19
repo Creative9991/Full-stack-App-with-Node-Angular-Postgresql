@@ -21,11 +21,13 @@ export class UrlService {
     return this.http.get<Monster[]>("http://localhost:3000/monsters");
   };
 
-  /*
-   postLives(): Observable<Monster[]> {
-     return this.http.post<Monster[]>("http://localhost:3000/monsters");
-  };
-
+  
+    // postMonster(data): Observable<Monster[]> {
+    //   // var url = "http://localhost:3000/monsters";
+    //   // return this.http.post<Monster[]>(url, data);
+    //   return  this.http.post<Monster[]>("http://localhost:3000/monsters");
+    // }
+/*
    deleteLives(): Observable<Monster[]> {
      return this.http.delete<Monster[]>("http://localhost:3000/monsters");
   };

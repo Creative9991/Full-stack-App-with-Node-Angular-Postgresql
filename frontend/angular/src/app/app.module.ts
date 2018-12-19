@@ -9,6 +9,7 @@ import { MonstersComponent } from './monsters/monsters.component';
 import { HabitatsComponent } from './habitats/habitats.component';
 import { LivesComponent } from './lives/lives.component';
 import {HttpClientModule} from '@angular/common/http';
+import { InputBoxComponent } from './input-box/input-box.component';
 //import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { LocaldatasericeService }  from './localdataservice.service';
 
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     MonstersComponent,
     HabitatsComponent,
-    LivesComponent
+    LivesComponent,
+    InputBoxComponent
   ],
   imports: [
     BrowserModule,

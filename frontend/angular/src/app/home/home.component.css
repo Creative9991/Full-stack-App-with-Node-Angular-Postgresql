@@ -7,3 +7,6 @@ button{
     height: 300px;
     width: 300px;
 }
+.row{
+    margin-left: 10px;
+}
