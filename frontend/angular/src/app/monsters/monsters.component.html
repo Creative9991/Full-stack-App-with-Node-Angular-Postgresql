@@ -3,17 +3,17 @@
     <div class="jumbotron">
       <h1>List of Monsters with Personalities</h1>
     </div>
-      create a Monster
+      <p>create a Monster</p>
       <button type="button" class="btn btn-primary" (click)="toggle()" id="btToggle"  >Create</button>
      <br> <br><br>
      <div *ngIf="show_dialog">
-     <form #loginForm="ngForm" (keydown)="keyDownFunction($event)">
+     <form #loginForm="ngForm">
         <div [hidden]="loginForm.submitted">
-          <div class="row">
+          <div class="row" >
             <div class="col-lg-4">
             </div>
             <!-- USERNAME and PASSWORD Section-->
-            <div class="col-lg-4" id="column">
+            <div class="col-lg-4" id="submitform">
               <br><br>
               <app-input-box #monstername [label]="'Monstername:'" [id]="'monstername'" [type]="'text'" (ivaluechange)='valuechange($event)' 
               [ivalue]='monsterdata.monstername'></app-input-box><br/>
@@ -22,7 +22,7 @@
               <div *ngIf="isError" class="panel panel-default">
                 <div class="panel-heading">Incorrect user ID or password. Type the correct user ID and password, and try again.</div>
               </div><br/>
-              <button type="button" class="btn btn-danger"  (click)="monsterData(monsterdata)">Submit</button>
+              <button type="button" class="btn btn-danger"  (click)="postMonster(monsterdata)">Submit</button>
               <br><br>
             </div>
             <div class="col-lg-4"></div>

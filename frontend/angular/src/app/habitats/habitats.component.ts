@@ -15,7 +15,6 @@ export class HabitatsComponent implements OnInit {
   selectedHabitate: Habitate;
   habitats: Habitate[];
   constructor(private router: Router, private urlService: UrlService) { 
-    console.log(this.habitats);
   }
   ngOnInit() {
     this.getHabitats();

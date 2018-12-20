@@ -15,7 +15,7 @@ router.get('/', cors(configurationOptions),(request, response,next)=>{
     });
 });
 
-router.get('/:id', (request, response,next)=>{
+router.get('/:id',cors(configurationOptions), (request, response,next)=>{
  const {id} = request.params;
  pool.query('SELECT * FROM monsters WHERE id = $1', [id] ,(err, res)=> {
     if(err) return next(err);
@@ -23,7 +23,7 @@ router.get('/:id', (request, response,next)=>{
 });
 });
 
-router.post('/', (request, response,next)=>{
+router.post('/', cors(configurationOptions),(request, response,next)=>{
     const {name,personality} = request.body;
     pool.query('INSERT INTO monsters(name,personality) VALUES($1,$2)',
       [name,personality],
@@ -53,7 +53,7 @@ router.put('/:id', (request, response, next) => {
       )
     });
   });
- router.delete('/:id', (request, response,next)=>{
+ router.delete('/:id',cors(configurationOptions), (request, response,next)=>{
      const {id} = request.params;
      pool.query('DELETE FROM monsters WHERE id=($1)', [id] ,(err, res)=> {
         if(err) return next(err);

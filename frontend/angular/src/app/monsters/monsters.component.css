@@ -25,12 +25,17 @@
     text-decoration: none;
     color: white;
 }
-#column{
-  border:2px solid black;
-  border-radius: 5px;
-}
+
 body{
   background-image: url("/assets/monster.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+p{
+  color: white;
+}
+#submitform{
+  background-color: blanchedalmond;
+  border:2px solid black;
+  border-radius: 5px;
 }

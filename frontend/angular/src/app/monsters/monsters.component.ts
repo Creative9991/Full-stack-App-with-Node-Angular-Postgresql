@@ -1,11 +1,7 @@
 import { Component, OnInit,NgModule } from '@angular/core';
 import { Monster } from '../monster';
-//import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-//import { HEROES } from '../mock-heroes';
-// import { MONSTERS } from '../mock-monsters';
 import { Router } from '@angular/router'
 import { UrlService} from '../url.service';
-
 
 
 @Component({
@@ -28,7 +24,6 @@ export class MonstersComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(this.monsters);
     this.getMonsters();
     //console.log(this.monsters);
   }
@@ -37,15 +32,15 @@ export class MonstersComponent implements OnInit {
     this.urlService.getMonsters()
         .subscribe(monsters => this.monsters = monsters);
   }
-//    postMonster(monsterdata): void {
-// //     // this.monsterdata={
-// //     //   name:'',
-// //     //   personality:''
-// //     // }
-// //   //   console.log(monsterdata);
-// //   //    this.urlService.postMonster(this.monsterdata)
-// //   //        .subscribe(monsters => this.monsters = monsters);
-// //   //  }
+   postMonster(): void {
+  this.urlService.postMonsters(this.monsterdata)
+         .subscribe(monsters => console.log(monsters),
+         (error) => console.log(error) 
+         );
+         console.log(this.monsterdata);
+    }
+
+   
 valuechange(data){
   Object.getOwnPropertyNames(data).forEach(item=>{
       this.monsterdata[item]=data[item];
