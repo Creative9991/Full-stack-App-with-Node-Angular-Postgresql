@@ -11,10 +11,10 @@ export class EditpopupComponent implements OnInit {
   @Input() tableContent: any;
   @Output() tableContentStatusChange = new EventEmitter<Element>();
   @Input() itemid: Number;
-  // dataObj: Element = {
-  //   monstername : '',
-  //   personality : ''
-  // }
+  dataObj: Element = {
+    monstername : '',
+    personality : ''
+  }
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class EditpopupComponent implements OnInit {
     if (!!this.itemid) {
       data = this.tableContent.data.filter(item => item.id == this.itemid)[0]
     } else {
-      //data = this.dataObj;
+      data = this.dataObj;
     }
     let dialogRef = this.dialog.open(Dialogcontent, {
       width: '450px',

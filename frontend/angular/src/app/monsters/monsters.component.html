@@ -48,7 +48,8 @@
   
  </div> 
  <div class="col-lg-3">
-    <app-editpopup></app-editpopup> &nbsp;
+    <app-editpopup [tableContent]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)"
+    [isEditsec]='false'></app-editpopup> &nbsp;
  <button type="button" class="btn btn-danger" click="deleteMonsters()">Delete</button>&nbsp;
  
 </div>
