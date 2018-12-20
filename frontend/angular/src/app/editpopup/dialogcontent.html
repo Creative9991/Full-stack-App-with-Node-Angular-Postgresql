@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Table Data</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+
+    <!-- Adding/Editing The ID -->
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">Monster-Name</label>
+        <input type="text" class="form-control" id="monstername" [(ngModel)]="data.monstername">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+
+    <!-- Add/Edit The Interview Date -->
+
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">Personality:</label>
+        <input type="text" class="form-control" id="personality" [(ngModel)]="data.personality">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+
+    <!-- Add/Edit The Interview Time -->
+
+    
+ 
+</div>
+
+<!-- Submit/Cancel Button -->
+
+<div mat-dialog-actions>
+  <button class="btn btn-primary" [mat-dialog-close]="data" cdkFocusInitial>Modify</button> &nbsp;&nbsp;
+  <button class="btn btn-default" (click)="onNoClick()">Cancel</button>
+</div>

@@ -19,7 +19,8 @@ export class UrlService {
     return this.http.get<Monster[]>("http://localhost:3000/monsters");
   };
   postMonsters(monsterdata : any[]){
-  const httpheaders = new HttpHeaders({'Content-Type' : 'application/json'}); 
+  const httpheaders = new HttpHeaders({'Content-Type' : 'application/json',
+  'Accept': 'application/json'}); 
   return  this.http.post<Monster[]>("http://localhost:3000/monsters", monsterdata);
     }
 /*

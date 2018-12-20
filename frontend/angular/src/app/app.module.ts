@@ -10,6 +10,10 @@ import { HabitatsComponent } from './habitats/habitats.component';
 import { LivesComponent } from './lives/lives.component';
 import {HttpClientModule} from '@angular/common/http';
 import { InputBoxComponent } from './input-box/input-box.component';
+import { EditpopupComponent } from './editpopup/editpopup.component';
+import { DemoMaterialModule } from './app.materialmodule';
+import { Dialogcontent} from './editpopup/dialogcontent';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { LocaldatasericeService }  from './localdataservice.service';
 
@@ -21,7 +25,9 @@ import { InputBoxComponent } from './input-box/input-box.component';
     MonstersComponent,
     HabitatsComponent,
     LivesComponent,
-    InputBoxComponent
+    InputBoxComponent,
+    EditpopupComponent,
+    Dialogcontent,
   ],
   imports: [
     BrowserModule,
@@ -29,10 +35,13 @@ import { InputBoxComponent } from './input-box/input-box.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DemoMaterialModule,
+    BrowserAnimationsModule
     // HttpClientInMemoryWebApiModule.forRoot(
     //   LocaldatasericeService, { dataEncapsulation: false }
     //   )
   ],
+  entryComponents: [EditpopupComponent, Dialogcontent],
   providers: [],
   bootstrap: [AppComponent]
 })
