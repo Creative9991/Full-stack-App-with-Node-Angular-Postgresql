@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Dialogcontent } from './dialogcontent'
+import { Dialogcontent } from './dialogcontent';
+import{Monsterdata} from '../monstertable'
 @Component({
   selector: 'app-editpopup',
   templateUrl: './editpopup.component.html',
@@ -11,7 +12,7 @@ export class EditpopupComponent implements OnInit {
   @Input() tableContent: any;
   @Output() tableContentStatusChange = new EventEmitter<Element>();
   @Input() itemid: Number;
-  dataObj: Element = {
+  dataObj: Monsterdata = {
     monstername : '',
     personality : ''
   }
